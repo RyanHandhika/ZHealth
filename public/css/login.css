@@ -1,0 +1,137 @@
+.loginPage {
+    width: 45%;
+    height: 90vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);    
+    overflow: hidden; 
+    z-index: 10;
+    display: none;
+}
+
+.loginFormContainer {
+    padding: 30px 50px 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; 
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 28px;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+    color: #333;
+}
+
+.formHeader h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.formHeader p {
+    color: #666;
+    margin-bottom: 5px;
+}   
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.inputGroup label {
+    display: block;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: #2DD4BF; /* Aksen warna tosca saat input aktif */
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.formOptions {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgotPassword {
+    font-size: 0.9em;
+    color: #14B8A6; 
+    text-decoration: none;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #14B8A6; 
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.loginButton:hover {
+    background-color: #0F766E;
+}
+
+.signupLink {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+.signupLink a {
+    color: #14B8A6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+@media (max-width: 900px) {
+    .formOptions {
+        margin-bottom: 10px;
+    }
+    .formHeader p {
+        margin-bottom: 10px;
+    }
+    .formOptions {
+        margin-bottom: 5px;
+    }
+    .inputGroup {
+        margin-bottom: 15px;
+    }
+    .signupLink {
+        text-align: center;
+        margin-top: 15px;
+        color: #555;
+    }
+}

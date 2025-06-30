@@ -1,0 +1,261 @@
+/* --- Definisi Variabel Warna & Reset CSS --- */
+:root {
+    --bg-color: rgb(225, 250, 240);
+    --card-color: #ffffff;
+    --primary-text-color: #0D5C63; /* Hijau tua kebiruan */
+    --secondary-text-color: #448085; /* Versi lebih terang dari primary */
+    --accent-color: #00BFA6; /* Hijau toska cerah */
+    --accent-hover-color: #00a08d;
+    --option-bg-color: #f0f8f6;
+    --option-border-color: #d1e7e1;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Layout Utama & Anti-Scroll --- */
+html, body {
+    height: 100%;
+    overflow: hidden; /* KUNCI: Menghilangkan scrollbar dari seluruh halaman */
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-wrapper {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 95, 74, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: all 0.4s ease;
+
+    /* KUNCI: Menjadikan wrapper sebagai flex container vertikal */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header Quiz & Progress Bar --- */
+.quiz-header {
+    flex-shrink: 0; /* Mencegah header menyusut */
+}
+
+.quiz-header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    background-color: #e0f2ef;
+    border-radius: 10px;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--accent-color), #4dd0e1);
+    border-radius: 10px;
+    height: 100%;
+    width: 0%; /* Diubah oleh JavaScript */
+    transition: width 0.5s ease-in-out;
+}
+
+.progress-text {
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    font-weight: 600;
+}
+
+/* --- Body Quiz (Pertanyaan & Pilihan) --- */
+.quiz-body {
+    margin: 20px 0;
+    /* KUNCI: Membuat bagian ini fleksibel untuk mengisi sisa ruang */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden; /* Mencegah konten di dalamnya membuat scroll */
+}
+
+#questionText {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 25px;
+    /* Menghapus min-height agar lebih fleksibel */
+}
+
+#optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.option-button {
+    background-color: var(--option-bg-color);
+    color: var(--primary-text-color);
+    border: 2px solid var(--option-border-color);
+    padding: 15px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: var(--font-family);
+    text-align: left;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.option-button:hover {
+    border-color: var(--accent-color);
+    background-color: #e6f6f3;
+}
+
+.option-button.selected {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* --- Footer Quiz (Tombol Selanjutnya) --- */
+.quiz-footer {
+    flex-shrink: 0; /* Mencegah footer menyusut */
+}
+
+#nextButton {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#nextButton:hover:not(:disabled) {
+    background-color: var(--accent-hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 191, 166, 0.3);
+}
+
+#nextButton:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* --- Kontainer Hasil --- */
+#resultContainer {
+    padding: 30px;
+}
+
+#resultContainer h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#finalScore {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+#stressLevelDescription {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+}
+
+#restartButton {
+    margin-top: 30px;
+    background-color: var(--primary-text-color);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #0a4a50;
+    transform: translateY(-2px);
+}
+
+#exitButton {
+    margin-top: 30px;
+    background-color: var(--primary-text-color);
+    color: white;
+    padding: 9px 30px;
+    border: none;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#exitButton:hover {
+    background-color: #0a4a50;
+    transform: translateY(-2px);
+}
+
+/* --- Utility Class --- */
+.hidden {
+    display: none;
+}
+
+/* --- Penyesuaian untuk Layar Pendek (Agar Tetap Muat) --- */
+@media (max-height: 750px) {
+    .quiz-wrapper {
+        padding: 20px;
+    }
+
+    .quiz-header h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .quiz-body {
+        margin: 15px 0;
+    }
+
+    #questionText {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .option-button {
+        padding: 12px 15px;
+        font-size: 0.9em;
+    }
+
+    #optionsContainer {
+        gap: 8px;
+    }
+
+    #nextButton, #restartButton {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}

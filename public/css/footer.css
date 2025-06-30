@@ -1,0 +1,166 @@
+/*
+=====================================================
+KODE CSS UNTUK FOOTER (Format camelCase)
+=====================================================
+*/
+
+/* --- Wadah Utama Footer --- */
+.footer {
+    background-color: #1E392A;
+    color: #E0E5E2; /* Warna abu-abu terang untuk teks */
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 4rem; /* Memberi jarak dari konten di atasnya */
+    margin-bottom: 0px;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Bagian Atas Footer (Grid Kolom) --- */
+.footerTop {
+    display: grid;
+    /* Membuat 4 kolom, dan akan otomatis menjadi 1-2 kolom di layar kecil */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding-bottom: 3rem;
+}
+
+/* --- Kolom Info, Links, dan Newsletter --- */
+.footerInfo, .footerLinks, .footerNewsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerLogo h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.footerInfo p {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.footerLinks h3, .footerNewsletter h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.footerLinks a {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.footerLinks a:hover {
+    color: rgb(225, 250, 240); /* Warna primer Anda */
+    padding-left: 5px;
+}
+
+/* --- Ikon Media Sosial --- */
+.footerSocialIcons a {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.footerSocialIcons a:hover {
+    background-color: rgb(225, 250, 240);
+    color: #2c3e50;
+}
+
+/* --- Form Newsletter --- */
+.footerNewsletter p {
+    margin-bottom: 1.5rem;
+}
+
+.newsletterForm {
+    display: flex;
+}
+
+.newsletterForm input {
+    flex-grow: 1;
+    border: 1px solid #7f8c8d;
+    background: #34495e;
+    color: #ffffff;
+    padding: 0.8rem;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.newsletterForm input::placeholder {
+    color: #95a5a6;
+}
+
+.newsletterForm button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    background-color: #4CAF50; /* Warna aksen dari About Us */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.newsletterForm button:hover {
+    background-color: #45a049;
+}
+
+/* --- Bagian Bawah Footer (Copyright) --- */
+.footerBottom {
+    border-top: 1px solid #34495e;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- Desain Responsif untuk Footer --- */
+@media (max-width: 768px) {
+    .footerTop {
+        gap: 2.5rem;
+    }
+
+    .footer {
+        padding-top: 4rem;
+    }
+
+    .footerInfo, .footerLinks, .footerNewsletter {
+        text-align: center;
+    }
+    
+    .footerLinks a:hover {
+        padding-left: 0;
+    }
+
+    .footerSocialIcons {
+        justify-content: center;
+    }
+
+    .newsletterForm {
+        justify-content: center;
+    }
+}

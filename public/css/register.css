@@ -1,0 +1,142 @@
+.registerPage {
+    width: 45%;
+    height: 90vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    z-index: 90;
+    display: none;
+    padding: 40px 50px;
+    overflow-y: auto; 
+}
+
+.registerFormContainer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.backButton {
+    position: absolute;
+    cursor: pointer;
+    top: -25px;
+    left: -30px;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.backButton:hover {
+    color: #000;
+}
+
+.formHeader {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.formHeader h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.formHeader p {
+    color: #666;
+    font-size: 1em;
+}
+
+.registerForm {
+    width: 100%;
+}
+
+.inputGroup {
+    margin-bottom: 18px;
+}
+
+.inputGroup label {
+    display: block;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: #2DD4BF;
+    box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.2);
+}
+
+.termsGroup {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 0.9em;
+}
+
+.termsGroup input[type="checkbox"] {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.termsGroup a {
+    color: #14B8A6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registerButton {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #14B8A6;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registerButton:hover {
+    background-color: #0F766E;
+}
+
+.loginLink {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+.loginLink a {
+    color: #14B8A6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.registerToLogin {
+    cursor: pointer;
+}

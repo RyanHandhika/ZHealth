@@ -1,0 +1,130 @@
+.productContainer {
+    position: relative;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    font-family: Roboto;
+    font-weight: bolder;
+}
+
+.floatContainer {
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    right: auto;
+    left: auto;
+    top: -70px;
+    gap: 20px;
+    z-index: 3;
+}
+
+.productCard {
+    border-radius: 20px;
+    max-width: 300px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 150px;
+    background-color: antiquewhite;
+}
+
+.pCard1Float {
+    position: relative;
+    bottom: 0;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.pCard2Float {
+    position: relative;
+    bottom: 0;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.pCard3Float {
+    position: relative;
+    bottom: 0;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.pCard1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background-image: url(/assets/kalkulator.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(204, 255, 204);
+}
+
+.pCard1 h1 {
+    font-size: 50px;
+}
+
+.pCard1:hover {
+    color: rgb(255, 255, 255);
+    background-image: none;
+}
+
+.pCard2 {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(170, 235, 210);
+    background-image: url(/assets/meter.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: transparent;
+}
+
+.pCard2 h1 {
+    font-size: 45px;
+}
+
+.pCard2:hover {
+    color: white;
+    background-image: none;
+}
+
+.pCard3 {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(100, 220, 185);
+    background-image: url(/assets/buku.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+}
+
+.pCard3 h1 {
+    font: 50px;
+}
+
+.pCard3:hover {
+    color: white;
+    background-image: none;
+}
+
+.pCard1Float:hover {
+    bottom: 10px;
+    
+}
+
+.pCard2Float:hover {
+    bottom: 10px;
+}
+
+.pCard3Float:hover {
+    bottom: 10px;
+}

@@ -1,0 +1,65 @@
+.landingPage {
+    width: 100%;
+    height: auto;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(225, 250, 240);
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 100px 400px;
+}
+
+.quotesCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 67%;
+}
+
+.quotes {
+    max-width: 600px;
+    max-height: 250px;
+    min-height: 200px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    border-radius: 10px;
+    padding-left: 30px;
+}
+
+.nurseLanding {
+    width: 30%;
+}
+
+.nurse {
+    position: absolute;
+    width: 320px;
+    height: 420px;
+    bottom: 0;
+    right: 50px;
+    background-image: url(/assets/nurse.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -200px ;
+    z-index: 2;
+}
+
+.designWhite {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 330px;
+    height: 350px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+@media (max-width: 900px) {
+    .quotes {
+        font-size: 30px;
+    }
+}

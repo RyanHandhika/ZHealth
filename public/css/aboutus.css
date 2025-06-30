@@ -1,0 +1,238 @@
+/*
+=====================================================
+KODE CSS UNTUK BAGIAN ABOUT US (Format camelCase)
+=====================================================
+*/
+
+/* --- Variabel & Font --- */
+/* Menggunakan font yang sudah Anda impor di HTML (Montserrat & Open Sans) */
+
+.aboutUsSection {
+    --primaryColorAbout: rgb(225, 250, 240);
+    --darkTextAbout: #333;
+    --secondaryTextAbout: #555;
+    --accentGreenAbout: #4CAF50;
+    --lightGrayAbout: #f9f9f9;
+    --whiteAbout: #ffffff;
+    --borderColorAbout: #e0e0e0;
+}
+
+/* --- Container Utama --- */
+.aboutUsSection {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--whiteAbout);
+}
+
+.aboutContainer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 6rem;
+}
+
+/* --- Tipografi & Judul --- */
+.aboutUsSection h1,
+.aboutUsSection h2,
+.aboutUsSection h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--darkTextAbout);
+    line-height: 1.3;
+}
+
+.aboutUsSection h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.aboutUsSection h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.aboutUsSection h2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: var(--accentGreenAbout);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.aboutUsSection h3 {
+    font-size: 1.4rem;
+    color: var(--accentGreenAbout);
+    margin-bottom: 1rem;
+}
+
+.aboutUsSection p {
+    color: var(--secondaryTextAbout);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* --- Placeholder Gambar --- */
+.aboutImgPlaceholder {
+    width: 100%;
+    background-color: #f0f4f8;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    color: #888;
+    font-style: italic;
+    border-radius: 8px;
+    margin: 2rem 0;
+    background-image: url(/assets/trendy-coffee-shop-city.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.aboutImgHero {
+    min-height: 400px;
+}
+
+.aboutImgInline {
+    min-height: 350px;
+}
+
+
+/* --- Bagian Hero --- */
+.aboutHero {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.aboutHeroText {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.aboutSubtitle {
+    font-size: 1.15rem;
+}
+
+/* --- Bagian Misi --- */
+.aboutMission {
+    background-color: var(--primaryColorAbout);
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    border-radius: 12px;
+}
+
+.aboutMissionContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.aboutMission h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* --- Bagian Features (Apa yang Kami Tawarkan) --- */
+.aboutFeatures {
+    padding: 4rem 0;
+}
+
+.aboutFeaturesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.aboutFeatureCard {
+    background: var(--whiteAbout);
+    border: 1px solid var(--borderColorAbout);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutFeatureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* --- Bagian Inline (Holistic Approach) --- */
+.aboutInlineSection {
+    border-radius: 20px;
+    background-color: var(--lightGrayAbout);
+    padding: 5rem 2rem;
+    margin: 4rem 0;
+}
+
+.aboutInlineGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.aboutInlineText h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.aboutInlineText h2::after {
+    margin: 1rem 0 0; /* Align underline to left */
+}
+
+/* --- Bagian Final CTA --- */
+.aboutFinalSection {
+    text-align: center;
+    padding: 4rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Desain Responsif --- */
+@media (max-width: 992px) {
+    .aboutInlineGrid {
+        gap: 2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .aboutUsSection h1 {
+        font-size: 2.5rem;
+    }
+
+    .aboutUsSection h2 {
+        font-size: 1.8rem;
+    }
+    
+    .aboutFeaturesGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .aboutInlineGrid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Balik urutan agar gambar di atas teks pada mobile */
+    .aboutInlineGrid .aboutImgInline {
+        grid-row: 1;
+    }
+    
+    .aboutInlineText h2 {
+        text-align: center;
+    }
+    
+    .aboutInlineText h2::after {
+        margin: 1rem auto 0;
+    }
+}
