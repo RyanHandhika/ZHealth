@@ -169,7 +169,7 @@
         <article class="articleWrapper">
 
             <div class="backLinkContainer">
-                <a href="/main.html" class="backLink">← Kembali ke Beranda</a>
+                <a href="/" class="backLink">← Kembali ke Beranda</a>
             </div>
 
             <header class="articleHeader">

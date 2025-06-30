@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zHealth</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -74,7 +74,7 @@
                             <p>Kadar gula darah normal usia 40 tahun perlu diketahui dan dijaga agar tetap stabil. Hal ini karena kadar gula darah yang tidak normal berisiko menyebabkan diabetes atau hipoglikemia, serta penyakit komplikasi lain yang dapat mengancam jiwa.</p>
                         </div>
                         <div class="linkToArtikel">
-                            <a href="article/artikel1.html" class="bArtikel">Baca Selengkapnya</a>
+                            <a href="article/artikel1" class="bArtikel">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
                             <p>Kadar gula darah normal usia 40 tahun perlu diketahui dan dijaga agar tetap stabil. Hal ini karena kadar gula....</p>
                         </div>
                         <div class="linkToArtikel2">
-                            <a href="article/artikel2.html" class="bArtikel">Baca Selengkapnya</a>
+                            <a href="article/artikel2" class="bArtikel">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                             <p>Kadar gula darah normal usia 40 tahun perlu diketahui dan dijaga agar tetap stabil. Hal ini karena kadar gula darah....</p>
                         </div>
                         <div class="linkToArtikel3">
-                            <a href="article/artikel3.html" class="bArtikel">Baca Selengkapnya</a>
+                            <a href="article/artikel3" class="bArtikel">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                             <p>Kadar gula darah normal usia 40 tahun perlu diketahui dan dijaga agar tetap stabil. Hal ini karena kadar gula darah yang tidak normal berisiko menyebabkan diabetes atau hipoglikemia, serta penyakit komplikasi lain yang dapat mengancam jiwa.</p>
                         </div>
                         <div class="linkToArtikel4">
-                            <a href="article/artikel4.html" class="bArtikel">Baca Selengkapnya</a>
+                            <a href="article/artikel4" class="bArtikel">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -309,6 +309,6 @@
 
     </div>
     <script src="https://kit.fontawesome.com/1aa47ce382.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
