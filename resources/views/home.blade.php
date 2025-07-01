@@ -15,23 +15,7 @@
 <body>
     <div class="container">
         <div class="landingPage">
-            <div class="header">
-                <div class="title">
-                    <div class="logoImage"></div>
-                    <h2>zHealth</h2>
-                </div>
-                <div class="searchContainer">
-                    <div class="searchImage"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <input type="text" class="searchBar" placeholder="Cari di zHealth">
-                </div>
-                <div class="navBar">
-                    <a href="#" class="home">Home</a>
-                    <a href="#article" class="article">Article</a>
-                    <a href="#product" class="product">Product</a>
-                    <a href="#" class="about">About</a>
-                    <button class="login">Login</button>
-                </div>
-            </div>
+            @include('partials.navbar')
             <div class="quotesCont">
                 <div class="quotes">
                     <h1>Investasi Terbaik? Kesehatanmu.</h1>
@@ -193,57 +177,11 @@
 
             </div>
         </div>
-        <div class="footer">
-            <div class="footerContainer">
-                <div class="footerTop">
-                    <div class="footerInfo">
-                        <div class="footerLogo">
-                            <h2>zHealth</h2>
-                        </div>
-                        <p>Menyederhanakan perjalanan sehat Anda dengan informasi tepercaya dan perangkat intuitif.</p>
-                        <div class="footerSocialIcons">
-                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="footerLinks">
-                        <h3>Jelajahi</h3>
-                        <a href="#">Home</a>
-                        <a href="#about">About</a>
-                        <a href="#article">Article</a>
-                        <a href="#product">Product</a>
-                    </div>
-
-                    <div class="footerLinks">
-                        <h3>Dukungan</h3>
-                        <a href="#">FAQ</a>
-                        <a href="#">Kontak Kami</a>
-                        <a href="#">Syarat & Ketentuan</a>
-                        <a href="#">Kebijakan Privasi</a>
-                    </div>
-
-                    <div class="footerNewsletter">
-                        <h3>Langganan Newsletter</h3>
-                        <p>Dapatkan tips kesehatan terbaru dan artikel pilihan langsung ke email Anda setiap minggu.</p>
-                        <div class="newsletterForm">
-                            <input type="email" placeholder="Masukkan email Anda">
-                            <button type="submit">Kirim</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footerBottom">
-                    <p>&copy; 2025 zHealth. Seluruh Hak Cipta Dilindungi.</p>
-                </div>
-            </div>
-        </div>
+        @include('partials.footer')
     </div>
     <div class="loginPage">
         <div class="loginFormContainer">
-            
+
             <a href="#" class="closeButton">&times;</a>
 
             <div class="formHeader">
